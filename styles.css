@@ -1,0 +1,1140 @@
+.language-selector {
+    position: relative;
+    z-index: 1000; /* Higher z-index to ensure it's clickable */
+    margin: 10px;
+    align-self: flex-start; /* Position at the top of the header */
+}
+
+.language-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.language-buttons .language-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-buttons .language-btn:hover {
+    background-color: #e9e9e9;
+    color: #000;
+}
+
+.language-buttons .language-btn i {
+    margin-left: 5px;
+}
+
+/* CHANGE 1: Updated font families */
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9ff; /* Light blue-tinted background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+/* Language dropdown styling */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.language-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.language-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.language-dropdown:hover .language-dropdown-content {
+    display: block;
+}
+
+/* CHANGE 2: Enhanced header with animation and more vibrant colors */
+.animated-header {
+    background: linear-gradient(135deg, #1a5d1a 0%, #4CAF50 50%, #8bc34a 100%); /* Green gradient */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-content h1 {
+    color: #ffffa0; /* Light yellow for the title */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-content .tagline {
+    color: #ffd700; /* Gold color for the tagline */
+}
+
+/* CHANGE 3: Animation classes */
+.bounce-in {
+    animation: bounceIn 1s;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s;
+}
+
+.slide-in {
+    animation: slideIn 1s;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* CHANGE 4: Floating math symbols with multiple colors */
+.floating-symbols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* This prevents the symbols from capturing clicks */
+    z-index: 1; /* Lower z-index than the language selector */
+}
+
+.symbol {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: float 15s infinite ease-in-out;
+}
+
+.symbol:nth-child(1) { 
+    top: 10%; 
+    left: 10%; 
+    animation-delay: 0s; 
+    color: rgba(255, 255, 0, 0.4); /* Yellow */
+}
+.symbol:nth-child(2) { 
+    top: 20%; 
+    left: 80%; 
+    animation-delay: 1s; 
+    color: rgba(255, 105, 180, 0.4); /* Pink */
+}
+.symbol:nth-child(3) { 
+    top: 60%; 
+    left: 15%; 
+    animation-delay: 2s; 
+    color: rgba(0, 255, 255, 0.4); /* Cyan */
+}
+.symbol:nth-child(4) { 
+    top: 70%; 
+    left: 70%; 
+    animation-delay: 3s; 
+    color: rgba(0, 255, 0, 0.4); /* Green */
+}
+.symbol:nth-child(5) { 
+    top: 30%; 
+    left: 30%; 
+    animation-delay: 4s; 
+    color: rgba(255, 165, 0, 0.4); /* Orange */
+}
+.symbol:nth-child(6) { 
+    top: 80%; 
+    left: 40%; 
+    animation-delay: 5s; 
+    color: rgba(255, 255, 255, 0.4); /* White */
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, 15px) rotate(5deg); }
+    50% { transform: translate(5px, -10px) rotate(-5deg); }
+    75% { transform: translate(-10px, 5px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* CHANGE 5: Enhanced colorful navigation */
+.main-nav {
+    background: linear-gradient(to right, #388e3c, #2e7d32); /* Dark green gradient */
+    padding: 0.8rem;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li {
+    margin: 0 1.5rem;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a i {
+    margin-right: 8px;
+}
+
+.main-nav ul li a:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffa0; /* Light yellow on hover */
+}
+
+/* CHANGE 6: Hero section with more colors */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #e0f7fa, #bbdefb); /* Light blue gradient background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(41, 128, 185, 0.2);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-content h2 {
+    color: #2e7d32; /* Pink heading */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.rounded-image {
+    border-radius: 15px;
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 5px solid #fff;
+}
+
+.rounded-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* CHANGE 7: Colorful card styling - rotating colors */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #2980b9; /* Default border color */
+}
+
+/* Rotating card colors */
+.info-card:nth-of-type(1) {
+    border-top-color: #ff6b6b; /* Red */
+}
+
+.info-card:nth-of-type(2) {
+    border-top-color: #4ecdc4; /* Teal */
+}
+
+.info-card:nth-of-type(3) {
+    border-top-color: #ff9f43; /* Orange */
+}
+
+.info-card:nth-of-type(4) {
+    border-top-color: #a55eea; /* Purple */
+}
+
+.info-card:nth-of-type(5) {
+    border-top-color: #0abde3; /* Blue */
+}
+
+.info-card:nth-of-type(6) {
+    border-top-color: #10ac84; /* Green */
+}
+
+.info-card:nth-of-type(7) {
+    border-top-color: #f368e0; /* Pink */
+}
+
+.info-card:nth-of-type(8) {
+    border-top-color: #ff9f43; /* Orange again */
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+/* Match heading colors to border colors */
+.info-card:nth-of-type(1) h2 {
+    color: #ff6b6b;
+}
+
+.info-card:nth-of-type(2) h2 {
+    color: #4ecdc4;
+}
+
+.info-card:nth-of-type(3) h2 {
+    color: #ff9f43;
+}
+
+.info-card:nth-of-type(4) h2 {
+    color: #a55eea;
+}
+
+.info-card:nth-of-type(5) h2 {
+    color: #0abde3;
+}
+
+.info-card:nth-of-type(6) h2 {
+    color: #10ac84;
+}
+
+.info-card:nth-of-type(7) h2 {
+    color: #f368e0;
+}
+
+.info-card:nth-of-type(8) h2 {
+    color: #ff9f43;
+}
+
+.info-card h2 i {
+    margin-right: 10px;
+}
+
+.highlight-card {
+    background: linear-gradient(to bottom right, #fcf8e3, #fef9e7);
+    border-left: 5px solid #f1c40f; /* Yellow/gold border */
+}
+
+/* CHANGE 8: Enhanced list styling with more colorful icons */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0.5rem;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list li i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Colorful icons in lists */
+.feature-list li:nth-child(3n+1) i {
+    color: #4CAF50; /* Green instead of red */
+}
+
+.feature-list li:nth-child(3n+2) i {
+    color: #10ac84; /* Green */
+}
+
+.feature-list li:nth-child(3n+3) i {
+    color: #5f27cd; /* Purple */
+}
+
+/* CHANGE 9: Colorful tabs styling */
+.tab-container {
+    margin-top: 1.5rem;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-button:hover {
+    background-color: #f7f7f7;
+}
+
+/* Color-coded tabs */
+.tab-button:nth-child(1) {
+    color: #10ac84; /* Green for Foundational */
+}
+
+.tab-button:nth-child(2) {
+    color: #0abde3; /* Blue for Development */
+}
+
+.tab-button:nth-child(3) {
+    color: #a55eea; /* Purple for Acceleration */
+}
+
+.tab-button:nth-child(1).active {
+    color: white;
+    background-color: #10ac84;
+    border-bottom: none;
+}
+
+.tab-button:nth-child(2).active {
+    color: white;
+    background-color: #0abde3;
+    border-bottom: none;
+}
+
+.tab-button:nth-child(3).active {
+    color: white;
+    background-color: #a55eea;
+    border-bottom: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Color-coded tab content backgrounds */
+#foundation.active {
+    background-color: rgba(16, 172, 132, 0.05); /* Light green background */
+}
+
+#development.active {
+    background-color: rgba(10, 189, 227, 0.05); /* Light blue background */
+}
+
+#acceleration.active {
+    background-color: rgba(165, 94, 234, 0.05); /* Light purple background */
+}
+
+/* CHANGE 10: More colorful badge styling */
+.badge-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.badge {
+    text-align: center;
+    margin: 0.5rem;
+    flex: 1;
+    min-width: 150px;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-5px);
+}
+
+/* Color-coded badges */
+.badge:nth-child(1) {
+    background-color: #fdcb6e; /* Yellow */
+    color: #6c5ce7;
+}
+
+.badge:nth-child(2) {
+    background-color: #74b9ff; /* Light blue */
+    color: #2d3436;
+}
+
+.badge:nth-child(3) {
+    background-color: #55efc4; /* Mint */
+    color: #2d3436;
+}
+
+.badge-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge-text {
+    display: block;
+    font-weight: bold;
+}
+
+/* CHANGE 11: Colorful teacher profiles */
+.teacher-profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.teacher-profile {
+    text-align: center;
+    margin: 1rem;
+    flex: 1;
+    min-width: 150px;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Color-coded teacher profiles */
+.teacher-profile:nth-child(1) {
+    background-color: #ffeaa7; /* Light yellow */
+}
+
+.teacher-profile:nth-child(2) {
+    background-color: #fab1a0; /* Light coral */
+}
+
+.teacher-profile:nth-child(3) {
+    background-color: #a29bfe; /* Light purple */
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+}
+
+/* Different colors for each icon */
+.teacher-profile:nth-child(1) .profile-icon {
+    background: linear-gradient(135deg, #eb4d4b, #ff7979);
+}
+
+.teacher-profile:nth-child(2) .profile-icon {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+.teacher-profile:nth-child(3) .profile-icon {
+    background: linear-gradient(135deg, #00b894, #55efc4);
+}
+
+.profile-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* CHANGE 12: Colorful enrollment steps */
+.enrollment-steps {
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Color-coded step numbers */
+.step:nth-child(1) .step-number {
+    background: linear-gradient(135deg, #4CAF50, #8bc34a); /* Green gradient */
+}
+
+.step:nth-child(2) .step-number {
+    background: linear-gradient(135deg, #66bb6a, #a5d6a7); /* Light green gradient */
+}
+
+.step:nth-child(3) .step-number {
+    background: linear-gradient(135deg, #0abde3, #48dbfb); /* Blue gradient */
+}
+
+.step-content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-content h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+/* Color-coded step headings */
+/*.step:nth-child(1) .step-content h4 {
+    color: #ff6b6b; Red 
+}*/
+
+/*.step:nth-child(2) .step-content h4 {
+    color: #ff9f43;  Orange 
+}*/
+
+.step:nth-child(1) .step-content h4 {
+    color: #4CAF50; /* Green */
+}
+
+.step:nth-child(2) .step-content h4 {
+    color: #66bb6a; /* Light green */
+}
+
+.step:nth-child(3) .step-content h4 {
+    color: #0abde3; /* Blue */
+}
+
+/* CHANGE 13: Alert card with more vibrant colors */
+.alert-card {
+    display: flex;
+    background: linear-gradient(to right, #fff4e0, #ffeaa7); /* Yellow gradient */
+    border-left: 5px solid #fdcb6e;
+}
+
+.alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #ff9f43;
+    margin-right: 1.5rem;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content h2 {
+    color: #ff9f43;
+    border-bottom: none;
+}
+
+/* CHANGE 14: More vibrant CTA card and button animation */
+.cta-card {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe); /* Purple gradient */
+    color: white;
+    text-align: center;
+    border-top: none;
+}
+
+.cta-card h2 {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+    background: linear-gradient(135deg, #43a047, #2e7d32); /* Green gradient */
+    box-shadow: 0 5px 20px rgba(67, 160, 71, 0.4);
+}
+
+.pulse-animation:hover {
+    background: linear-gradient(135deg, #2e7d32, #43a047); /* Reversed gradient */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 5px 20px rgba(67, 160, 71, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 10px 30px rgba(67, 160, 71, 0.6); }
+    100% { transform: scale(1); box-shadow: 0 5px 20px rgba(67, 160, 71, 0.4); }
+}
+
+/* CHANGE 15: More colorful countdown styling */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 80px;
+}
+
+.countdown-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #ffeaa7; /* Light yellow */
+}
+
+.countdown-item span:last-child {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* CHANGE 16: Enhanced colorful footer */
+footer {
+    /* background: linear-gradient(135deg, #4b0082 0%, #9370db 50%, #6a5acd 100%); Same as header for consistency */
+    background: linear-gradient(135deg, #1a5d1a 0%, #4CAF50 50%, #8bc34a 100%); /* Green gradient */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footer-logo, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo h3 {
+    color: #ffd700; /* Gold */
+    margin: 0;
+}
+
+.footer-links h4, .footer-social h4 {
+    color: #ffffa0; /* Light yellow */
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: #a3d0f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Colorful social icons */
+.social-icons a:nth-child(1) {
+    background: #3b5998; /* Facebook blue */
+}
+
+.social-icons a:nth-child(2) {
+    background: #1da1f2; /* Twitter blue */
+}
+
+.social-icons a:nth-child(3) {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+}
+
+.social-icons a:nth-child(4) {
+    background: #ff0000; /* YouTube red */
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CHANGE 17: Added pattern backgrounds and dividers */
+.divider {
+    height: 50px;
+    margin: 2rem 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* CHANGE 18: Responsive adjustments with more vibrant elements */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .alert-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .alert-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* CHANGE 19: Added animations for various elements */
+@keyframes wobble {
+    0%, 100% { transform: translateX(0); }
+    15% { transform: translateX(-5px) rotate(-5deg); }
+    30% { transform: translateX(5px) rotate(5deg); }
+    45% { transform: translateX(-5px) rotate(-3deg); }
+    60% { transform: translateX(5px) rotate(3deg); }
+    75% { transform: translateX(-3px) rotate(-1deg); }
+    90% { transform: translateX(3px) rotate(1deg); }
+}
+
+.badge:hover .badge-icon,
+.teacher-profile:hover .profile-icon {
+    animation: wobble 1s;
+}
+
+/* CHANGE 20: Added rainbow text effect for special elements */
+.rainbow-text {
+    background: linear-gradient(to right, #ff6b6b, #ff9f43, #fdcb6e, #10ac84, #0abde3, #6c5ce7, #a29bfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 5s linear infinite;
+    background-size: 200% auto;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* CHANGE 21: Math-themed pattern backgrounds */
+.pattern-bg {
+    position: relative;
+}
+
+.pattern-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* CHANGE 22: Special effect for the button */
+.cta-button {
+    display: inline-block;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    transform: translateX(0);
+}
+
+.video-thumbnail[onclick] {
+    cursor: pointer;
+}
+
+
+.detail-item {
+    display: flex;
+    align-items: center;
+}
+
+.detail-item i {
+    margin-right: 10px;
+}
+
+.detail-item p {
+    margin: 0;
+}
+
+
+/* Badge container styling */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+}
+
+/* Make badges smaller and add background colors */
+/* Make badges smaller with limited width */
+.badge {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 140px; /* Set a fixed width for each badge */
+    justify-content: center; /* Center the content horizontally */
+    margin: 0.3rem; /* Add some margin between badges */
+}
+
+/* Make sure the text doesn't overflow */
+.badge-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Badge-specific colors */
+.badge[data-topic="algebra"] {
+    background-color: #ffecee;
+    color: #ff6b6b;
+}
+
+.badge[data-topic="geometry"] {
+    background-color: #e5f7fd;
+    color: #0abde3;
+}
+
+.badge[data-topic="number-theory"] {
+    background-color: #e5f9f4;
+    color: #10ac84;
+}
+
+.badge[data-topic="calculus"] {
+    background-color: #eeeaff;
+    color: #6c5ce7;
+}
+
+.badge[data-topic="competition"] {
+    background-color: #fff3e5;
+    color: #ff9f43;
+}
+
+.badge[data-topic="problem-solving"] {
+    background-color: #f5eaff;
+    color: #a55eea;
+}
+
+.badge[data-topic="logic"] {
+    background-color: #eaebed;
+    color: #2d3436;
+}
+
+.badge-icon {
+    margin-right: 0.5rem;
+}
+
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group label {
+    margin-bottom: 0;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.styled-select {
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+}
