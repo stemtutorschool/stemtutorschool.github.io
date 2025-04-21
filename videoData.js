@@ -44,6 +44,15 @@ const sampleVideos = [
         thumbnail: "https://www.youtube.com/watch?v=wR2S4ylKJKQ",
         uploadDate: "2025-03-15",
         youtubeId: "wR2S4ylKJKQ"
+    },
+    {
+        id: 6,
+        title: "Add - within 20 by using blocks | Math | Pre-algebra | Grade 2 - 4",
+        grade: "2-4",
+        topic: "pre-algebra",
+        thumbnail: "https://www.youtube.com/watch?v=okbqkyyrmNY",
+        uploadDate: "2025-03-15",
+        youtubeId: "okbqkyyrmNY"
     }
     // You can add more video entries here as needed
 ];
