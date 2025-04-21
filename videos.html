@@ -657,6 +657,17 @@
         function openYoutubeVideo(videoId) {
             window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
         }
+        // Debug function to check video loading
+        console.log("Total videos in dataset:", sampleVideos ? sampleVideos.length : 0);
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOM loaded, displaying videos...");
+            console.log("Videos to display:", sampleVideos ? sampleVideos.length : 0);
+            // Reset any filters that might be applied
+            document.getElementById("gradeFilter").value = "all";
+            document.getElementById("topicFilter").value = "all";
+            // Display all videos
+            displayVideos(sampleVideos);
+        });
     </script>
               <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
   <script>
